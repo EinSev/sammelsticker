@@ -50,7 +50,7 @@ const checkNumber = () => {
     <div>
       <input v-model="inputNumber" @input="checkNumber" type="number" min="1" max="180" id="numberInput"
              placeholder="# (1-180)" autofocus class="p-3 border border-gray-300 rounded w-48">
-      <p v-if="error" class="font-bold text-red-600 text-center">Nicht zwischen 0 und 180</p>
+      <p v-if="error" class="font-bold text-red-600 text-center">Nicht zwischen 1 und 180</p>
     </div>
 
     <div v-if="((result !== null) && (inputNumber !== null)) && error === false" class="mt-4 text-center text-xl">
