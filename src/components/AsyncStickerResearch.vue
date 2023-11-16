@@ -22,7 +22,6 @@ const {data: duplicateList } = await supabase
     .from('duplicate')
     .select('*');
 
-console.log(duplicateList)
 
 const checkNumber = () => {
   let input = parseInt(inputNumber.value);
