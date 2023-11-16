@@ -1,9 +1,9 @@
 <script setup>
-import MissingStickers from "./components/MissingStickers.vue";
+import StickerResearch from "./components/StickerResearch.vue";
 </script>
 
 <template>
-  <MissingStickers />
+  <StickerResearch />
 </template>
 
 <style scoped>
