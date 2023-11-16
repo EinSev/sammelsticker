@@ -1,5 +1,5 @@
 <script setup>
-import StickerResearch from "./components/StickerResearch.vue";
+import StickerResearch from "./components/StandardUI.vue";
 </script>
 
 <template>
