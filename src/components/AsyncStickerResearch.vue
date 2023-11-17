@@ -17,7 +17,6 @@ const {data: missingList } = await supabase
     .from('missing')
     .select('*');
 
-
 const {data: duplicateList } = await supabase
     .from('duplicate')
     .select('*');
@@ -27,11 +26,15 @@ const checkNumber = () => {
   let input = parseInt(inputNumber.value);
   error.value = false;
   duplicateAmount.value = null;
-  result.value = null;
+  result.value = false;
 
   if (input <= 180) {
 
-    result.value = missingList.includes(input);
+    missingList.forEach((row) => {
+      if (row["id"] === input) {
+        result.value = true;
+      }
+    })
 
     duplicateList.forEach((row) => {
       if (row["id"] === input) {
