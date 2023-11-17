@@ -26,7 +26,7 @@ const checkNumber = () => {
   let input = parseInt(inputNumber.value);
   error.value = false;
   duplicateAmount.value = null;
-  result.value = false;
+  result.value = null;
 
   if (input <= 180) {
 
@@ -35,6 +35,10 @@ const checkNumber = () => {
         result.value = true;
       }
     })
+
+    if (result.value === null) {
+      result.value = false;
+    }
 
     duplicateList.forEach((row) => {
       if (row["id"] === input) {
